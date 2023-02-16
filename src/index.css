@@ -1,0 +1,140 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 100%;
+}
+.App {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #888888;
+}
+/* Navbar */
+
+.navbar__nav {
+	background-color: #f2f2f2;
+	width: 100vw;
+	padding: 2rem 0;
+	margin-bottom: 2rem;
+	box-shadow: 5px 3px 8px #555555;
+}
+
+.navbar__Logo {
+	color: rgb(163, 56, 163);
+	margin-left: 2rem;
+}
+
+table,
+th,
+td {
+	border: 2px solid #f2f2f2;
+}
+table {
+	border-radius: 10px;
+	max-width: 70vw;
+	text-align: center;
+	color: #f2f2f2;
+	background-color: #242424;
+}
+th {
+	cursor: pointer;
+}
+
+.loader__div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+.loader__span {
+	font-size: 5rem;
+	animation-name: load;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes load {
+	0% {
+		transform: skewX(0deg);
+		transform: skewY(0deg);
+	}
+	25% {
+		transform: skewX(10deg);
+		transform: skewY(10deg);
+	}
+	50% {
+		transform: skewX(0deg);
+		transform: skewY(0deg);
+	}
+	75% {
+		transform: skewX(-10deg);
+		transform: skewY(-10deg);
+	}
+	100% {
+		transform: skewX(0deg);
+		transform: skewY(0deg);
+	}
+}
+
+a {
+	text-decoration: none;
+	font-size: large;
+	color: #242424;
+}
+
+/* pagination */
+ul {
+	display: flex;
+	gap: 0.5rem;
+}
+
+li {
+	list-style: none;
+	background-color: #f2f2f2;
+	padding: 0.5rem;
+	box-shadow: 5px 5px 8px #555555;
+}
+li,
+a:active {
+	color: purple;
+}
+
+.page__anchor:focus {
+	color: purple;
+}
+
+.page__ul {
+	margin: 2rem 0;
+}
+
+/* filter */
+
+.filter__input {
+	width: 20vw;
+	padding: 0.5rem;
+	margin-bottom: 2rem;
+	outline: none;
+}
+.filter__input:focus {
+	border: none;
+	box-shadow: 5px 5px 8px #555555;
+}
+@media (width<550px) {
+	html {
+		font-size: 60%;
+	}
+}
